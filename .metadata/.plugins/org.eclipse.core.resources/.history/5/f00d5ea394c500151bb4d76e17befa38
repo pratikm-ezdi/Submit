@@ -1,0 +1,37 @@
+
+import java.io.*;
+import java.sql.*;
+
+public class Main{
+  public static void main(String[] args) {
+  System.out.println("Insert records example using prepared statement!");
+  Connection con = null;
+  try{
+  Class.forName("com.mysql.jdbc.Driver");
+  con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Student_records","root","P@ssw0rd@123");
+  try{
+  String sql = "INSERT Student_table VALUES(?,?,?)";
+  PreparedStatement prest = con.prepareStatement(sql);
+  BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+  System.out.println("Enter Id :");
+  String stu_id = bf.readLine();
+  prest.setString(1, stu_id);
+  System.out.println("Enter Name :");
+  int name = Integer.parseInt(bf.readLine());
+  prest.setInt(2, name);
+  System.out.println("Enter Department Name :");
+  int dprt_name = Integer.parseInt(bf.readLine());
+  prest.setInt(2, dprt_name);
+  int count = prest.executeUpdate();
+  System.out.println(count + "row(s) affected");
+  con.close();
+  }
+  catch (SQLException s){
+  System.out.println("SQL statement is not executed!");
+  }
+  }
+  catch (Exception e){
+  e.printStackTrace();
+  }
+  }
+}

@@ -1,0 +1,26 @@
+package defaultpackage;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class First {
+	
+	public static void main(String[] args)
+	
+	{
+		Connection con = null;
+		Class.forName(com.mysql.jdbd.Connection);
+		
+		try{
+		con = (Connection)DriverManager.getConnection("jdbcmysql://localhost:3307/Student_records","root","P@ssw0rd@123");
+	
+		if(con!=null)
+		System.out.println("Connection Successful");
+		}
+		catch(Exception e)
+			{
+				System.out.println("Not Connected");
+			}
+}
+
+}

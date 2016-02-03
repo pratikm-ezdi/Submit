@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="0" key="org.eclipse.egit.ui.internal.clone.GitSelectWizardPageWizardSel"/>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="ssh://git@github.com/pradiprocks/ForTest.git"/>
+		<item value="git@github.com:pradiprocks/TooNew.git"/>
+		<item value="ssh://git@github.com/pradiprocks/TooNew.git"/>
+		<item value="ssh://git@github.com/prizz53/SalesIndia.git"/>
+	</list>
+	<section name="GitImportWizard">
+		<item value="true" key="GitProjectsImportPage.STORE_NESTED_PROJECTS"/>
+	</section>
+	<section name="GitCommitMessageComponent">
+		<list key="/home/ubuntu/git/TooNew2/.git">
+			<item value="empty"/>
+		</list>
+		<list key="/home/ubuntu/git/SalesIndia/.git">
+			<item value="empty"/>
+		</list>
+	</section>
+</section>
